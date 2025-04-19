@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Animasyon Durdurma Ve Başlatma</title>
+        <link href="bootstrap-5.3.3/css/bootstrap.min.css" rel="styleSheet">
+        <style>
+            .card-body
+            {
+                display: none;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-md-4">
+                <button class="btn btn-danger" id="btn_durdur">Durdur</button>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Genişletmek için tıklayın</h3>
+                    </div>
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error delectus, distinctio assumenda molestias 
+                        aperiam atque reprehenderit quos eius itaque vero quasi nesciunt voluptatum minima dolore laborum 
+                        voluptas excepturi ullam quidem, sit adipisci eos magnam! Ea obcaecati sequi voluptate explicabo est 
+                        quisquam facilis aliquid magni! Sed ut similique molestias iste quasi!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script src="bootstrap-5.3.3/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".card-header").click(function(){
+                    console.log("a");
+                    $(".card-body").slideDown(5000);
+                });
+                $("#btn_durdur").click(function(){
+                    $(".card-body").stop();
+                })
+            });
+        </script>
+    </body>
+</html>

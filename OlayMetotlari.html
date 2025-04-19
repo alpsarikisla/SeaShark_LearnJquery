@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Jquery Olay Metotları</title>
+       
+    </head>
+    <body>
+        <p>Bana buton diyemezsin.</p>
+        <p>Bana buton diyemezsin.</p>
+        <label>Ben bir label'ım</label><br><br>
+        <span id="span1">ben bir span'im</span>
+        <div>
+            İsim = <br> <input type="text" name="isim"><br><br>
+            Soyisim = <br> <input type="text" name="soyisim"><br><br>
+        </div>
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("p").click(function(){
+                    $(this).hide();
+                });
+                $("label").dblclick(function(){
+                    $(this).hide();
+                });
+                /*$("#span1").mouseenter(function(){
+                    alert("Gıdıklamaaaa!!!");
+                });*/
+                /*$("#span1").mouseleave(function(){
+                    alert("Güle güle sana!!!");
+                });*/
+                /*
+                $("#span1").mousedown(function(){
+                    alert("Mouse Basıldı");
+                });
+                */
+               /*
+               $("#span1").mouseup(function(){
+                    alert("Güle Güle");
+               });
+               */
+                /*
+                $("#span1").hover(function(){
+                    $(this).css("background-color","orangered");
+                },
+                function(){
+                    $(this).css("background-color","white");
+                });
+                */
+                /*
+                $("input").focus(function(){
+                    $(this).css("background-color","#efefef");
+                });
+                $("input").blur(function(){
+                    $(this).css("background-color","white");
+                });
+                */
+               $("#span1").on({
+                mouseenter:function(){
+                    $(this).css("background-color","pink");
+                },
+                mouseleave:function(){
+                    $(this).css("background-color","orangered");
+                },
+                click:function(){
+                    $(this).css("background-color","purple");
+                }
+               });
+            });
+        </script>
+    </body>
+</html>

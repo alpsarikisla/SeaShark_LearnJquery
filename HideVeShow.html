@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Jquery Olay Metotları</title>
+       <style>
+        .kutu{
+            background-color: gold;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+        }
+       </style>
+    </head>
+    <body>
+        <button id="gizle">Gizle</button>
+        <button id="goster">Göster</button>
+        <button id="toggle">Toggle</button>
+        <div class="kutu"></div>
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+           $(document).ready(function(){
+            $("#gizle").click(function(){
+                /*$(".kutu").hide(1000);*/
+                $(".kutu").hide("fast");
+            });
+            $("#goster").click(function(){
+               /*$(".kutu").show(1000);*/
+               $(".kutu").show("slow");
+            });
+            $("#toggle").click(function(){
+                $(".kutu").toggle(1000);
+            });
+           });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Jquery Olay Metotları</title>
+       <style>
+        .kutu{
+            background-color: gold;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+            display: none;
+        }
+       </style>
+    </head>
+    <body>
+        <button id="slidedown">Göster</button>
+        <button id="slideup">Gizle</button>
+        <button id="slidetoggle">Toggle</button>
+        <div class="kutu"></div>
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+           $(document).ready(function(){
+                $("#slidedown").click(function(){
+                    $(".kutu").slideDown();
+                });
+                $("#slideup").click(function(){
+                    $(".kutu").slideUp();
+                });
+                $("#slidetoggle").click(function(){
+                    $(".kutu").slideToggle();
+                });
+           });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Jquery Seçiciler</title>
+        <style>
+            .kirmizi{
+                background-color: darkred;
+                height: 100px; width: 100px;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Animasyonu Başlat</button> <br> <br>
+        <label>Ben bir label'ım html sayfasında.</label><br><br>
+        <div class="kirmizi"></div>
+      
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                   /* $("div").animate({
+                        left:'250px',
+                        height:'200px',
+                        width:'200px',
+                        opacity:'0.5'
+                    });*/
+
+                    /*
+                    $("div").animate({
+                        height:'+=100px',
+                        width:'+=100px'
+                    });*/
+                    
+                    /*
+                    $("div").animate({
+                        height:'toggle'
+                    });
+                    */
+                   var div = $("div");
+                   $("label").animate({fontSize:'20pt'});
+                   div.animate({height:'300px',opacity:'0.4'}, "slow");
+                   div.animate({height:'500px',opacity:'0.9'}, "slow");
+                   div.animate({height:'100px',opacity:'0.4'}, "slow");
+                   div.animate({height:'100px',opacity:'1'}, "slow");
+                });
+            });
+        </script>
+    </body>
+</html>

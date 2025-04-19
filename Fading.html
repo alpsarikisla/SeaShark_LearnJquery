@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Jquery Olay Metotları</title>
+       <style>
+        .kutu{
+            background-color: gold;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+            display: none;
+        }
+       </style>
+    </head>
+    <body>
+        <button id="fin">Göster</button>
+        <button id="fout">Gizle</button>
+        <button id="ftoggle">Toggle</button>
+        <button id="fto">Fade To</button>
+        <div class="kutu"></div>
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+           $(document).ready(function(){
+            $("#fin").click(function(){
+                $(".kutu").fadeIn();
+                $(".kutu").fadeIn("slow");
+                $(".kutu").fadeIn(3000);
+            });
+            $("#fout").click(function(){
+                $(".kutu").fadeOut();
+                $(".kutu").fadeOut("fast");
+                $(".kutu").fadeOut(100);
+            });
+            $("#ftoggle").click(function(){
+                $(".kutu").fadeToggle();
+            });
+            $("#fto").click(function(){
+                $(".kutu").fadeTo("slow", 0.2);
+            });
+           });
+        </script>
+    </body>
+</html>
