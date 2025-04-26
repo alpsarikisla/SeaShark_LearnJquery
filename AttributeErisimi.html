@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Attribute Erisimi</title>
+    </head>
+    <body>
+        <p id="paragraf"><b>Lorem ipsum</b> dolor sit amet consectetur adipisicing elit. </p>
+        <input type="text" id="tb_icerik"><br>
+        <a href="http://www.google.com" id="link">Google'a gideriken aldıda bir yağmur</a><br>
+        <button id="btn_text">İçerik Getir</button>
+        <button id="btn_html">Html Getir</button>
+        <button id="btn_val">Value Getir</button>
+        <button id="btn_attr">Attribute Getir</button><br>
+        <button id="btn_setText">Metin Gir</button>
+        <button id="btn_setHtml">Html Gir</button>
+        <button id="btn_setVal">Değer Değiştir</button>
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn_text").click(function(){
+                    alert("Text = " + $("#paragraf").text());
+                });
+                $("#btn_html").click(function(){
+                    alert("HTML = " + $("#paragraf").html());
+                });
+                /*
+                $("#btn_val").click(function(){
+                    alert("Value = " + $("#paragraf").val());
+                });
+                */
+                $("#btn_val").click(function(){
+                    alert("Value = " + $("#tb_icerik").val());
+                });
+                $("#btn_attr").click(function(){
+                    alert("Attribute = " + $("#link").attr("href"));
+                });
+                $("#btn_setText").click(function(){
+                    $("#paragraf").text("Murtaza'dan selamlar");
+                });
+                $("#btn_setVal").click(function(){
+                    $("#tb_icerik").val("Nabünüz???");
+                });
+
+            });
+        </script>
+    </body>
+</html>

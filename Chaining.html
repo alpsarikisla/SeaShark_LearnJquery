@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Jquery Chaining</title>
+       
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic exercitationem saepe vitae provident dolores officia mollitia itaque consequatur cum. Alias.</p>
+        <button>Murtaza was here!!!</button>
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("p").css("color", "blue").slideUp(2000).slideDown(200);
+                });
+            });
+        </script>
+    </body>
+</html>

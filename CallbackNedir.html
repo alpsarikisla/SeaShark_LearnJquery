@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Callback Nedir</title>
+    </head>
+    <body>
+        <button>Tıkla</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iusto maxime nam deleniti exercitationem reprehenderit illum voluptatibus rerum, veritatis odit.</p>
+
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               /*$("button").click(function(){
+                    $("p").hide(1000);
+                    alert("Fonksiyon Tamamlandı.(Callback yok)");
+               });*/
+               $("button").click(function(){
+                    $("p").hide("slow", function(){
+                        alert("Fonksiyon Tamamlandı.(Callback var)");
+                    });
+               });
+            });
+        </script>
+    </body>
+</html>
