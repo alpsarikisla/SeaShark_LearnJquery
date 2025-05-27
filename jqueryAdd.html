@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Jquery Add işlemleri</title>
+    </head>
+    <body>
+       
+       <p id="p_metin"></p><br/>
+       <button id="btn_ekle">Paragraf'a ekle</button>
+       <button id="btn_oneEkle">Öne Ekle</button>
+       <button onclick="metinEkle()">Fonksiyon ile ekle</button>
+       <br/>
+       <img src="Resimler/duck.gif" width="120"><br>
+       <button id="btn_resminOnune">Resmin önüne</button>
+       <button id="btn_resminArkasina">Resmin önüne</button>
+       <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+       <script>
+        $(document).ready(function(){
+            $("#btn_ekle").click(function(){
+                $("#p_metin").append("Ben Fonksiyon ile eklendim<br/>")
+            });
+            $("#btn_oneEkle").click(function(){
+                $("#p_metin").prepend("Selamlar Ben Geldim")
+            });
+            $("#btn_resminOnune").click(function(){
+                $("img").before("<b>qwack<b>");
+            });
+            var metin1 = "<p>after ile eklendim<p>";
+            $("#btn_resminArkasina").click(function(){
+                $("img").after("<b>qwack<b>", metin1);
+            });
+        });
+        function metinEkle()
+        {
+            var metin1 = "<p>Metin ekle fonksiyonu ile eklendim<p>";
+            var metin2 = $("<p></p>").text("Metin ekle ile eklenen 2. metin");
+            var metin3 = document.createElement("p");
+            metin3.innerHTML = "metin ekle ile eklenen 3. metinim";
+            $("body").append(metin1, metin2, metin3);
+        };
+       </script>
+    </body>
+</html>

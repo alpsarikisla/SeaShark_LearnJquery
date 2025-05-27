@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Jquery Css Manupulasyonu</title>
+        <style>
+           .onemli{
+                font-weight: bolder;
+                font-size: xx-large;
+           }
+           .turuncu{
+                color: orangered;
+           }
+        </style>
+    </head>
+    <body>
+        <h1>Başlık 1</h1>
+        <label>Başlık 2</label><br>
+        <button id="btn_sinifEkle"> Sınıf Ekle </button>
+        <button id="btn_sinifSil"> Sınıf Sil </button>
+        <button id="btn_sinifToggle"> Sınıf Toggle </button>
+        <button id="btn_cssGetir"> Css Getir </button>
+        <button id="btn_cssDegistir"> Css Değiştir </button>
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn_sinifEkle").click(function(){
+                    /*$("label").addClass("turuncu");
+                    $("label").addClass("onemli");*/
+                    $("label").addClass("turuncu onemli");
+                });
+                $("#btn_sinifSil").click(function(){
+                    $("label").removeClass("turuncu");
+                });
+                $("#btn_sinifToggle").click(function(){
+                    $("label").toggleClass("onemli");
+                });
+                $("#btn_cssGetir").click(function(){
+                    alert("Yazı Rengi = " + $("label").css("color"));
+                });
+                $("#btn_cssDegistir").click(function(){
+                    /*$("label").css("background-color","yellow");*/
+                    $("label").css({"background-color":"yellow","font-size":"50pt"});
+                });
+            });
+        </script>
+    </body>
+</html>

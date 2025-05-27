@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Jquery Soy Ağacı</title>
+        <style>
+           .suayipogullari *{
+                display: block;
+                border:2px solid silver;
+                color: silver;
+                padding: 5px;
+                margin: 15px;
+           }
+        </style>
+    </head>
+    <body>
+       <div class="suayipogullari">
+            <div>
+                Büyük Büyük Baba
+                <ul>Büyük baba
+                    <li>baba
+                        <label>Murtaza Şuayipoğlu</label>
+                    </li>
+                </ul>
+            </div>
+       </div>
+
+        <script src="jquery-3.7.1/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               /*var baba = $("label").parent();
+               baba.css({"color":"red","border":"2px solid red"});*/
+               /*
+               var babalar = $("label").parents();
+               babalar.css({"color":"red","border":"2px solid red"});*/
+              /*
+               var baba = $("label").parents("ul");
+               baba.css({"color":"red","border":"2px solid red"});
+              */
+              var babayakadar = $("label").parentsUntil("div");
+              babayakadar.css({"color":"red","border":"2px solid red"})
+            });
+        </script>
+    </body>
+</html>
